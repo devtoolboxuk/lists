@@ -1,0 +1,30 @@
+{
+  "name": "devtoolboxuk/lists",
+  "description": "Basic Package to provide useful lists",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "devtoolboxuk\\lists\\": "src/"
+    },
+    "classmap": [
+      "src"
+    ]
+  },
+  "authors": [
+    {
+      "name": "Rob Wilson",
+      "email": "rob@dev-toolbox.co.uk"
+    }
+  ],
+  "require": {
+    "devtoolboxuk/engrafo": "^1.0.9"
+  },
+  "minimum-stability": "dev",
+  "scripts": {
+    "test": "./vendor/bin/phpunit"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "*"
+  }
+}
