@@ -2,22 +2,21 @@
 
 namespace devtoolboxuk\lists;
 
+use devtoolboxuk\engrafo\EngrafoService;
+
 class ListService
 {
     private $listArray = [];
 
-    public function findInArray($type, $keyword='')
+    /**
+     * @param $type
+     * @param string $keyword
+     * @return bool
+     */
+    public function findInArray($type, $keyword = '')
     {
         $this->listArray = $this->getArray($type);
-    }
-
-    /**
-     * @param string $type
-     * @return false|string
-     */
-    public function getJson($type = '')
-    {
-        return json_encode($this->getArray($type));
+        return in_array($keyword,$this->listArray);
     }
 
     /**
@@ -28,19 +27,51 @@ class ListService
     {
         switch (strtolower($type)) {
             case 'badbot':
-                return $this->readResource('BadBots');
+                $this->readResource('BadBots');
+                break;
+            case 'throwawaydomains':
+                $this->readResource('ThrowAwayDomains');
+                break;
+            case 'torexitnodes':
+                $this->readResource('TorExitNodes');
                 break;
         }
-        return [];
+        return $this->listArray;
     }
 
     private function readResource($file = '')
     {
-        //Read in file to an array
+
+        $fileName = sprintf('%s.txt',$file);
+        $path = sprintf('%s/../Resources/',__DIR__);
+
+        $options = [
+            'adapter' => 'text',
+            'fileName' => $fileName,
+            'path' => $path,
+        ];
+
+        $engrafoService = new EngrafoService($options);
+        $txtService = $engrafoService->getAdapter();
+
+        $this->listArray = $txtService->readFile();
     }
 
-    private function hasOption($name)
+    /**
+     * @param string $type
+     * @return int
+     */
+    public function countArray($type = '')
     {
-        return isset($this->listArray[$name]);
+        return count($this->getArray($type));
+    }
+
+    /**
+     * @param string $type
+     * @return false|string
+     */
+    public function getJson($type = '')
+    {
+        return json_encode($this->getArray($type));
     }
 }

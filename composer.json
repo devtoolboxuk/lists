@@ -18,7 +18,7 @@
     }
   ],
   "require": {
-    "devtoolboxuk/engrafo": "^1.0.9"
+    "devtoolboxuk/engrafo": "^1.1.0"
   },
   "minimum-stability": "dev",
   "scripts": {

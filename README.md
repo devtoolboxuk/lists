@@ -18,13 +18,22 @@
 - [Background](#Background)
 - [Usage](#Usage)
 - [Help Support This Project](#Help Support This Project)
-
+- [Acknowledgements & Recognition](#Acknowledgements and Recognition)
 - [Maintainers](#Maintainers)
 - [License](#License)
 
 ## Background
 
 Returns usesful lists such as Bad Bots, or possible Tor Exit Nodes
+
+## Lists
+
+[![BadBots](https://img.shields.io/badge/Bad%20Bots-536-Red.svg?style=plastic)](https://github.com/devtoolboxuk/lists/tree/master/src/Resources/BadBots.txt)
+
+[![TorExitNodes](https://img.shields.io/badge/Tor%20Exit%20Nodes-1282-Blue.svg?style=plastic)](https://github.com/devtoolboxuk/lists/tree/master/src/Resources/TorExitNodes.txt)
+
+[![Throw Away Domains](https://img.shields.io/badge/Throw%20Away%20Domains-2360-Blue.svg?style=plastic)](https://github.com/devtoolboxuk/lists/tree/master/src/Resources/ThrowAwayDomains.txt)
+
 
 ## Usage
 
@@ -53,6 +62,23 @@ $this->listService->getJson('Bad Bots');
 ## Help Support This Project
 
 [![Help Support This Project](https://github.com/devtoolboxuk/lists/tree/master/src/assets/buy-me-a-coffee-button.png)](https://Ko-fi.com/devtoolboxuk )
+
+
+
+## List of some disposable emails database
+
+- http://10minutemail.com
+- http://spamdecoy.net
+- http://temp-mail.org
+- http://torvpn.com/temporaryemail.html
+- http://www.bloggingwv.com/big-list-of-disposable-temporary-email-services/
+- http://www.fakemailgenerator.com/
+- http://www.warriorforum.com/main-internet-marketing-discussion-forum/147524-list-temporary-email-services-you-may-want-block-your-autoresponder-little-rant.html
+- http://xenforo.com/community/threads/ban-temporary-email-addresses.5461/
+
+## Acknowledgements and Recognition
+- [@Dan](https://www.dan.me.uk/torlist/?exit) - Have ported over the list of possible tor exit nodes
+- [@MattKetmo](https://github.com/MattKetmo) - Have ported over the throw away domain list
 
 
 ## Maintainers
